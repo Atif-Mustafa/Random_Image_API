@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios")
 const cors = require('cors')
 const app = express();
-
+const PORT = process.env.PORT || 3000;
 app.use(cors())
 
 
@@ -38,6 +38,6 @@ app.use((err, req, res, next) => {
             })
     })
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("server is up and listening at port 5000");
 })
